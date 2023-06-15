@@ -1,0 +1,188 @@
+:root {
+  --color-dark: rgb(14, 14, 14);
+  --color-dark2: rgb(32, 32, 32);
+  --color-dark3: rgb(22, 22, 22);
+  --color-white: rgb(255, 255, 255);
+  --color-green: rgb(103, 195, 80);
+  --color-green2: rgb(51, 149, 26);
+  --color-red: rgb(184, 40, 35);
+  --color-red2: rgb(146, 22, 17);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  font-family: sans-serif;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+hr {
+  border: 0.5px var(--color-dark2) solid;
+}
+
+#input-new-item,
+#btn-add-item,
+#btn-update-item {
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  padding: 1rem;
+}
+
+#input-new-item {
+  width: 18rem;
+  border-radius: 1rem;
+}
+
+#btn-add-item {
+  background-color: var(--color-green);
+  color: var(--color-dark);
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#btn-add-item:hover {
+  background-color: var(--color-dark3);
+  color: var(--color-white);
+}
+
+#btn-update-item {
+  background-color: var(--color-dark2);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+  transition: .4s;
+  display: none;
+}
+
+#btn-update-item:hover {
+  background-color: var(--color-dark3);
+}
+
+#btn-edit {
+  background-color: var(--color-dark2);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#btn-edit:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+#btn-remove {
+  background-color: var(--color-dark2);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#btn-remove:hover {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+#btn-done {
+  background-color: var(--color-dark2);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+#btn-done:hover {
+  background-color: var(--color-green2);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content-grocery-list {
+  overflow: scroll;
+  max-height: 420px;
+  scroll-behavior: smooth;
+}
+
+.add-item {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+#grocery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+#grocery-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.5rem 1rem;
+  transition: .2s;
+}
+
+#grocery-list li:hover {
+  background-color: var(--color-dark3);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.item-done {
+  text-decoration: line-through;
+  opacity: 30%;
+}
+
+@media (max-width: 320px) {
+
+  #input-new-item,
+  #btn-add-item,
+  #btn-update-item {
+    font-size: 0.8rem;
+  }
+
+  #input-new-item {
+    width: 14rem;
+  }
+
+}
