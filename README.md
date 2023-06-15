@@ -4,6 +4,8 @@
 
 > Utilizando a Web Storage API para armazenar os dados da lista (localStorage)
 
+[Live preview](https://gwebsurfer.github.io/localstorage-grocery-list)
+
 ### Funcionalidades
 
 - [x] Task 1 - Adicionar novo item;
